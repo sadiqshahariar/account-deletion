@@ -1,0 +1,112 @@
+﻿@using AccountDeletion.Controllers
+@using AccountDeletion.Repositories;
+@model AccountDeletion.Models.AppConfig;
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        Account Deletion
+
+    </title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <!-- Custom CSS -->
+    <link href="css/cutomStyle.css" rel="stylesheet" />
+    <style>
+        @@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Nav -->
+    <nav style="background-color:@Model.BannerColor" class="navbar navbar-expand-md navbar-light sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="@Model.Logo"
+                     height="50px" />
+            </a>
+        </div>
+    </nav>
+    <!-- Top Nav -->
+
+    <div id="wrapper">
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="">
+                <div id="app">
+                    <main class="py-4">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-md-12">
+                                    <div style="background-color=@Model.FormColor" ;class="card">
+                                        <div style="background-color:@Model.FormColor" class="card-header"></div>
+                                        <ul class="breadcrumb">
+                                            <li>Account Delete Request</li>
+                                        </ul>
+                                        <div class="card-body">
+                                            <form method="POST" asp-action="SubmitForm">
+                                                <div class="row small">
+                                                    <div class="col-md-8 offset-md-2">
+
+                                                        @if (!string.IsNullOrEmpty(ViewBag.SuccessMessage))
+                                                        {
+                                                            <div>
+                                                                <div class="alert alert-success" role="alert">
+                                                                    @ViewBag.SuccessMessage
+                                                                </div>
+                                                            </div>
+
+                                                        }
+
+                                                        @*
+                                                        <span>Your account deletion request received successfully</span> *@
+                                                        <input type="hidden" name="appid" value="@Model.App.Id" />
+                                                        <div class="form-group">
+                                                            <label for="data">
+                                                                @Model.InputLabel
+                                                            </label>
+                                                            <input class="form-control"
+                                                                   id="data"
+                                                                   required=""
+                                                                   placeholder="@Model.Placeholder"
+                                                                   name="data"
+                                                                   type="text" />
+                                                        </div>
+
+                                                        <div style="background-color=@Model.FormColor" class="col-md-12">
+                                                            <p class="text-center">
+                                                                <button style="background-color: @Model.ButtonColor" ; class="btn btn-success" type="submit">
+                                                                    Submit
+                                                                </button>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <footer class="text-center footer"></footer>
+                    </main>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AdminLTE 3 | Validation Form</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+</head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+ 
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+
+            </div>
+          <!-- left column -->
+          <div class="col-md-6">
+            <!-- jquery validation -->
+            <div class="card card-primary">
+               <h3>Add The add Confing Data</h3>
+              <!-- /.card-header -->
+              <!-- form start -->
+              <form id="quickForm" method="POST" asp-action="AddConfingData" asp-controller="Dashboard">
+                <div class="card-body">
+                  <div class="form-group">
+                    <label for="AppId">App Id</label>
+                    <input type="text" name="appid" class="form-control" id="exampleInputPassword1" placeholder="App Id">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="Banner color">Banner Colour</label>
+                    <input type="text" name="bannercolor" class="form-control" id="exampleInputPassword1" placeholder="Banner colour">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="Form color">Form Colour</label>
+                    <input type="text" name="formcolor" class="form-control" id="exampleInputPassword1" placeholder="Form colour">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="Logo">Logo</label>
+                    <input type="file" name="logo" class="form-control" id="exampleInputPassword1" placeholder="logo">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="input level">Input level</label>
+                    <input type="text" name="inputlevel" class="form-control" id="exampleInputPassword1" placeholder="Input level">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="placholder">Phone Number</label>
+                    <input type="text" name="phonenumber" class="form-control" id="exampleInputPassword1" placeholder="Placeholder">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="button color">Button Colour</label>
+                    <input type="text" name="buttoncolor" class="form-control" id="exampleInputPassword1" placeholder="Button colour">
+                  </div>
+                  <div class="form-group mb-0">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" name="terms" class="custom-control-input" id="exampleCheck1">
+                      <label class="custom-control-label" for="exampleCheck1">I agree to the <a href="#">terms of service</a>.</label>
+                    </div>
+                  </div>
+                </div>
+                <!-- /.card-body -->
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </form>
+            </div>
+            <!-- /.card -->
+            </div>
+          <!--/.col (left) -->
+          <!-- right column -->
+          <div class="col-md-6">
+
+          </div>
+          <!--/.col (right) -->
+        </div>
+        <!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="../../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- jquery-validation -->
+<script src="../../plugins/jquery-validation/jquery.validate.min.js"></script>
+<script src="../../plugins/jquery-validation/additional-methods.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../../dist/js/demo.js"></script>
+<!-- Page specific script -->
+
+</body>
+</html>
